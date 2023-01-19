@@ -30,9 +30,57 @@ layout: post
 
 #### In light of modern digitalization, using credit cards to conduct financial transactions at banks or other financial institutions is a common practice. Switching from a manual process to a completely automated system, such as those seen in smart cities, is not without its risk. Credit card fraud is still a problem in the financial business, therefore it must be handled as soon as possible. The study's findings will significantly benefit the community in terms of avoiding fraudulent credit card transactions and thereby decreasing damages by offering new knowledge about the class imbalance concern that credit card fraud detection system developers must solve. This research will also be used to design more effective credit card fraud detection systems in the future.
 
+## Methodology for Handling Imbalanced Domains
+
+![title](https://raw.githubusercontent.com/sarahsobri97/sarahportfolio.github.io/master/assets/Methodology.png)
+
+## Data Source and Type
+
+#### This project makes use of a standard dataset that is freely available on Kaggle, where it comprises over 284,807 records of credit card transactions of European cardholders that occurred within two days in September 2013. The dataset is highly imbalanced where it displays only 492 fraudulent transactions out of 284,807 transactions. The class variable is divided into two, where 1 is a positive class, which is fraud and 0 is the negative class, which is non-fraud. Missing values are not found in the dataset. Visit [kaggle][kaggle] to view the dataset.
+
+## Proposed Machine Learning Models
+
+1. Random Under Sampling
+2. Random Over Sampling
+3. Synthetic Minority Oversampling Technique (SMTOE)
+4. Modified Synthetic Minority Oversampling Technique (MSMOTE)
+
+## Machine Learning Models
+
+1. Logistic Regression
+2. Random Forest
+3. XGBoost
+
+## Evaluation Metrics For Model Validation
+
+1. Confusion Matrix
+2. Accuracy
+3. Sensitivity
+4. Specificity
+5. Precision
+6. F1- Score
+7. Precision- Recall (PR) curve
+
 ## Solved End-to-End Credit Card Fraud Detection Source Code
 
+### Importing Libraries Used
+
+![title](https://raw.githubusercontent.com/sarahsobri97/sarahportfolio.github.io/master/assets/EDA.png)
+
+#### To import the data into a Dataframe object, we have to utilise the pandas package. Numpy, on the other hand, is a general-purpose array-preprocessing package that includes a high-performance multidimensional array object as well as features for managing them. Plotting was accomplished using the matplotlib and seaborn libraries. Some data preprocessing, model development and model evaluation was done with the sklearn library. Finally, when working with classification involving imbalanced classes, the imblearn library was implemented.
+
+### Performing Exploratory Data Analysis
 Source code can be included by fencing the code with three backticks. Syntax highlighting works automatically when specifying the language after the backticks.
+
+![title](https://raw.githubusercontent.com/sarahsobri97/sarahportfolio.github.io/master/assets/Descriptive%20Analysis.png)
+
+#### Skimpy is a lightweight programme that also offers summary statistics for datagram variables. We will begin by reviewing the data before beginning EDA operations. There are 284807 rows and 31 columns, as we can see, with no missing data.
+
+```javascript
+df = pd.read_csv('/content/drive/MyDrive/Colab Notebooks/CreditCardFraud/creditcard.csv')
+```
+
+![title](https://raw.githubusercontent.com/sarahsobri97/sarahportfolio.github.io/master/assets/first%2020%20rows.png)
 
 ````
 ```javascript
@@ -56,3 +104,4 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
+[kaggle]: https://www.kaggle.com/mlg-ulb/creditcardfraud/version/3
