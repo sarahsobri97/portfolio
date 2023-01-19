@@ -82,6 +82,59 @@ df = pd.read_csv('/content/drive/MyDrive/Colab Notebooks/CreditCardFraud/creditc
 
 ![title](https://raw.githubusercontent.com/sarahsobri97/sarahportfolio.github.io/master/assets/first%2020%20rows.png)
 
+#### We can see that the features 'Time' and 'Amount' differ significantly from the rest, thus we'll need to standardise them before generating the model during data pre-processing.
+
+### Remove Dupicates
+
+```javascript
+df.duplicated(keep='first).sum()
+df.drop_duplicates(keep='first', inplace=True).sum()
+```
+
+The dataset contains no null values by default. However, it contained 1081 duplicate values. Using the skim function to remove the duplicated values, we discovered that the dataset now has 283726 rows. We also discovered that the non-fraud class now has 283253 rows while the fraud class had 473 rows.
+
+![title](https://raw.githubusercontent.com/sarahsobri97/sarahportfolio.github.io/master/assets/Data%20summary%20after%20removing%20duplicates.png)
+
+### Standardizaton
+
+#### Rescaling the range of data so that the mean of observed data is 0 and the standard deviation is 1 is the process of standardising a dataset. Because their values differed substantially from the others, we just need to scale the 'Time' and 'Amount' variables.
+
+```javascript
+sc = StandardScaler()
+amt = df['Amount'].values
+df['Amount'] = sc.fit_transform(amt.reshape(-1,1))
+df['Amount']
+```
+
+```javascript
+sc = StandardScaler()
+time = df['Time'].values
+df['Time'] = sc.fit_transform(amt.reshape(-1,1))
+df['Time']
+```
+
+### Data Splitting
+
+#### We have given x the task of carrying all the independent variables and y the task of carrying only the target variable, 'Class.' The data was then split into x train, x test, y train, and y test using the train_test_split function, with the training set receiving 80% of the data and the test set receiving the remainder.
+
+```javascript
+y = df['Class']
+x = df.drop(['Class'], axis=1)
+
+x_train, x_test, y_train, y_test = train_test_split(x,y, random_state=100, test_size=0.2)
+```
+
+## Result Summary of all the models
+
+![title](https://raw.githubusercontent.com/sarahsobri97/sarahportfolio.github.io/master/assets/Data%20summary%20after%20removing%20duplicates.png)
+
+
+
+
+
+
+
+
 ````
 ```javascript
 function foo () {
