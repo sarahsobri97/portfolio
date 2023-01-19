@@ -4,8 +4,7 @@ layout: post
 ---
 
 ![title](https://raw.githubusercontent.com/sarahsobri97/sarahportfolio.github.io/master/assets/face_mask_detection.png)
-![title](https://github.com/sarahsobri97/sarahportfolio.github.io/blob/master/assets/face_mask_detection.png)
-![title](https://raw.githubusercontent.com/sarahsobri97/sarahportfolio.github.io/master/assets/credit%20card%20fraud%20picture.jpeg)
+
 The proposed model uses a well-known deep learning method to design a classifier and collect images of people wearing and not wearing masks. We present an efficient face mask-based facial image categorization system based on a MobileNet and VGG16-based deep learning model. The packages OpenCV, Keras, and Tensorflow are used in this Python project. This model can immediately identify the mask's faces from any angle. It can generate output from any RGB image, independent of orientation. Using this technology, we hope to detect the presence of face masks on static images and real-time videos.
 
 
