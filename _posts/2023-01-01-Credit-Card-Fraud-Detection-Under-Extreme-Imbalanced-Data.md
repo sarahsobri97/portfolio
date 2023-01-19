@@ -126,35 +126,8 @@ x_train, x_test, y_train, y_test = train_test_split(x,y, random_state=100, test_
 
 ## Result Summary of all the models
 
-![title](https://raw.githubusercontent.com/sarahsobri97/sarahportfolio.github.io/master/assets/Data%20summary%20after%20removing%20duplicates.png)
+![title](https://raw.githubusercontent.com/sarahsobri97/sarahportfolio.github.io/master/assets/Final%20Result.png)
 
+#### After analysing all the models, we can conclude that the model that outperforms the rest is the random forest with SMOTE. In real-time scenarios, we cannot have both precision and recall high. If we increase the precision, it will simultaneously reduce recall and vice versa. This is known as the precision-recall trade-off.From table 2, we can see that the random forest model after resampling with SMOTE has the best-balanced trade-off with a precision of 88% and recall of approximately 85%. Precision refers to the percentage of our results being positive, and recall refers to the percentage of total positive results correctly classified by the model. For this work, we did not consider the tuned models as the outputs for precision and recall were compromised when tested for our top three models.
 
-
-
-
-
-
-
-````
-```javascript
-function foo () {
-    return "bar";
-}
-```
-````
-
-This would be rendered as:
-
-```javascript
-function foo () {
-    return "bar";
-}
-```
-
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
 [kaggle]: https://www.kaggle.com/mlg-ulb/creditcardfraud/version/3
