@@ -18,6 +18,10 @@ minimal: false             # use a dark header
 navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "index.html", title: "Home Page"}
   - {file: "sarahresume.pdf", title: "My Resume"}
+  - {file: "README.md", title: Project 1"}
+  - {file: "README2.md", title: Project 2"}
+  - {file: "README3.md", title: Project 3"}
+  - {file: "README4.md", title: Project 4"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:sarahsobri97@gmail.com"}
